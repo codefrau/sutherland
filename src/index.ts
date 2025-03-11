@@ -4,7 +4,12 @@ import * as app from './app';
 import * as tablet from './tablet';
 import * as demos from './demos';
 import * as mouseAndKeyboard from './mouseAndKeyboard';
+import * as crt from './crt';
 import { isTablet } from './helpers';
+
+if (true) {
+    crt.run();
+} else {
 
 canvas.init(document.getElementById('canvas') as HTMLCanvasElement);
 
@@ -40,3 +45,5 @@ onFrame();
 
 (window as any).app = app;
 (window as any).demos = demos;
+
+} // not CRT
